@@ -1,5 +1,4 @@
 /**
- *
  * Function to get all object keys including prototype
  * @param object
  * @returns {*[]}
