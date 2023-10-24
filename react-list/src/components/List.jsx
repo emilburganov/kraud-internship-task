@@ -16,7 +16,7 @@ const List = ({title}) => {
             const response = await fetch('https://jsonplaceholder.typicode.com/todos');
             const data = await response.json();
             setTodos(data);
-        } catch {
+        } catch(error) {
             console.log(error);
         }
 
