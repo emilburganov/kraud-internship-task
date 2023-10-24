@@ -5,6 +5,10 @@ const List = ({title}) => {
     const [todos, setTodos] = useState([]);
     const [loading, setLoading] = useState(false);
 
+    /**
+     * Get todos from jsonplaceholder method
+     * @returns {Promise<void>}
+     */
     const getTodos = async () => {
         setLoading(true);
 
@@ -13,7 +17,7 @@ const List = ({title}) => {
             const data = await response.json();
             setTodos(data);
         } catch {
-
+            console.log(error);
         }
 
         setLoading(false);
